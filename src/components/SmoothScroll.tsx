@@ -16,7 +16,7 @@ export default function SmoothScroll({
         Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
 
-    // ✅ EXPOSE LENIS GLOBALLY
+    
     (window as any).lenis = lenis;
 
     function raf(time: number) {

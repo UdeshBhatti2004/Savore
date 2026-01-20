@@ -30,7 +30,7 @@ export default function Footer() {
     <footer className="bg-black text-[#FDFCF7] pt-12 pb-8 border-t-[6px] md:border-t-[8px] border-red-600 w-full overflow-hidden">
       <Container>
 
-        {/* TOP CTA */}
+        
         <div className="flex flex-col sm:flex-row justify-between items-start lg:items-end gap-12 mb-16">
           <div className="max-w-3xl">
             <motion.h2
@@ -45,7 +45,7 @@ export default function Footer() {
             </motion.h2>
           </div>
 
-          {/* BOOK TABLE CTA */}
+          
           <motion.div whileHover={{ scale: 1.05 }} className="relative self-center lg:self-auto mt-4 lg:mt-0">
             <ScrollLink target="booking" className="group block">
               <div className="absolute -inset-3 md:-inset-4 border border-white/10 group-hover:border-red-600 transition-colors rounded-full animate-[spin_8s_linear_infinite]" />
@@ -58,10 +58,10 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* MAIN GRID */}
+       
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-x-6 gap-y-10 py-12 border-y border-white/10">
 
-          {/* Local Time */}
+         
           <div className="space-y-3">
             <span className="text-[10px] font-black uppercase tracking-widest text-red-600 block">
               Local Time
@@ -71,20 +71,20 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Navigation */}
+          
           <div className="space-y-3">
             <span className="text-[10px] font-black uppercase tracking-widest text-red-600 block">
               Navigation
             </span>
             <ul className="text-[11px] md:text-[12px] font-bold uppercase flex flex-col gap-2">
+              <li><ScrollLink target="home" className="hover:text-red-600 transition-colors">Home</ScrollLink></li>
               <li><ScrollLink target="menu" className="hover:text-red-600 transition-colors">The Menu</ScrollLink></li>
               <li><ScrollLink target="about" className="hover:text-red-600 transition-colors">Our Roots</ScrollLink></li>
               <li><ScrollLink target="gallery" className="hover:text-red-600 transition-colors">The Look</ScrollLink></li>
-              <li><ScrollLink target="reserve" className="hover:text-red-600 transition-colors">Reservations</ScrollLink></li>
             </ul>
           </div>
 
-          {/* Location */}
+          
           <div className="space-y-3">
             <span className="text-[10px] font-black uppercase tracking-widest text-red-600 block">
               Locate
@@ -94,7 +94,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Contact */}
+          
           <div className="space-y-3">
             <span className="text-[10px] font-black uppercase tracking-widest text-red-600 block">
               Contact
@@ -112,7 +112,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Social */}
+         
           <div className="space-y-3">
             <span className="text-[10px] font-black uppercase tracking-widest text-red-600 block">
               Social
@@ -126,7 +126,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Newsletter */}
+          
           <div className="col-span-2 sm:col-span-3 xl:col-span-1 mt-4 xl:mt-0 space-y-3">
             <span className="text-[10px] font-black uppercase tracking-widest text-red-600 block">
               Newsletter
@@ -144,7 +144,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* BOTTOM BAR */}
+        
         <div className="flex flex-col sm:flex-row justify-between items-center pt-8 gap-6">
           <p className="text-[9px] font-black uppercase tracking-[0.4em] opacity-30 italic">
             SAVORÉ GASTRONOMY © 2026

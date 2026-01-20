@@ -66,11 +66,11 @@ function GalleryContent() {
 
   return (
     <main className="bg-[#FDFCF7]">
-      {/* ================= STICKY SCROLL GALLERY ================= */}
+      
       <section ref={containerRef} className="relative h-[300vh]">
         <div className="sticky top-0 h-screen flex flex-col overflow-x-hidden">
 
-          {/* HEADER */}
+          
           <div className="pt-6 sm:pt-8 md:pt-12 lg:pt-16 pb-4 sm:pb-6 md:pb-8">
             <Container>
               <motion.h2
@@ -91,7 +91,7 @@ function GalleryContent() {
             </Container>
           </div>
 
-          {/* FILM STRIP */}
+          
           <div className="flex-1 flex items-center min-h-0 relative overflow-visible mt-4 sm:mt-6 md:mt-8">
             <motion.div
               style={{ x: smoothX }}
@@ -131,7 +131,7 @@ function GalleryContent() {
             </motion.div>
           </div>
 
-          {/* FOOTER STRIP */}
+          
           <div className="h-10 mt-5 sm:h-12 md:h-16 flex-shrink-0">
             <Container className="h-full flex items-center justify-between opacity-40">
               <span className="font-black text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-widest whitespace-nowrap">
@@ -146,7 +146,7 @@ function GalleryContent() {
         </div>
       </section>
 
-      {/* ================= TEXT MARQUEE ================= */}
+      
       <div className="bg-black py-10 overflow-hidden border-y-[4px] border-black">
         <motion.div
           animate={{ x: "-50%" }}
@@ -164,7 +164,7 @@ function GalleryContent() {
         </motion.div>
       </div>
 
-      {/* ================= PHILOSOPHY SECTION ================= */}
+      
       <section className="py-24 bg-[#FDFCF7]">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">

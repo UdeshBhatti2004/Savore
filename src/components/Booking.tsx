@@ -11,7 +11,7 @@ export default function Booking() {
     <section id="booking" className="bg-[#FDFCF7] py-20">
       <Container>
 
-        {/* ================= HEADER (MATCHES MENU / GALLERY / ABOUT) ================= */}
+        
         <div className="mb-12 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, x: -40 }}
@@ -36,7 +36,7 @@ export default function Booking() {
           </motion.div>
         </div>
 
-        {/* ================= BOOKING CARD ================= */}
+        
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export default function Booking() {
           className="grid grid-cols-1 lg:grid-cols-12 border-[3px] border-black bg-white shadow-[15px_15px_0px_0px_rgba(220,38,38,1)] overflow-hidden"
         >
 
-          {/* ================= LEFT: VISUAL ================= */}
+          
           <div className="lg:col-span-5 relative min-h-[320px] sm:min-h-[400px] lg:min-h-full bg-black group overflow-hidden border-b-[3px] lg:border-b-0 lg:border-r-[3px] border-black">
             <img
               src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=80"
@@ -83,7 +83,7 @@ export default function Booking() {
             </div>
           </div>
 
-          {/* ================= RIGHT: FORM ================= */}
+         
           <div className="lg:col-span-7 p-8 sm:p-10 md:p-12 flex flex-col justify-center">
             <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
 

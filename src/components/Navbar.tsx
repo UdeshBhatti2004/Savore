@@ -9,7 +9,7 @@ import ScrollLink from "@/components/ScrollLink";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Lock scroll when mobile menu is open
+  
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -29,7 +29,7 @@ export default function Navbar() {
       <Container>
         <nav className="flex items-center justify-between h-20 md:h-24">
           
-          {/* LEFT: DESKTOP LINKS (Your Original Desktop UI) */}
+          
           <div className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <ScrollLink
@@ -43,7 +43,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* LEFT: MOBILE HAMBURGER (Refined Trigger) */}
+        
           <button
             className="lg:hidden flex flex-col gap-1.5 z-[120] relative"
             onClick={() => setIsOpen(!isOpen)}
@@ -63,7 +63,7 @@ export default function Navbar() {
             />
           </button>
 
-          {/* CENTER: LOGO (Your Original Desktop UI) */}
+          
           <Link
             href="/"
             className="absolute left-1/2 -translate-x-1/2 text-center group"
@@ -76,7 +76,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* RIGHT: CTA (Your Original Desktop UI) */}
+          
           <div className="flex items-center">
             <ScrollLink
               target="booking"
@@ -88,7 +88,7 @@ export default function Navbar() {
         </nav>
       </Container>
 
-      {/* REFINED MINIMALIST MOBILE OVERLAY */}
+      
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -98,13 +98,13 @@ export default function Navbar() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="fixed inset-0 bg-[#FDFCF7] z-[110] flex flex-col lg:hidden"
           >
-            {/* Minimal Header Branding */}
+            
             <div className="pt-32 px-8 flex justify-between items-end opacity-40">
               <span className="text-[9px] font-black uppercase tracking-[0.3em]">Directory</span>
               <span className="text-[9px] font-black uppercase tracking-[0.3em]">CDMX // 19.43</span>
             </div>
 
-            {/* Links: Clean, Scaled Down, and Smooth */}
+            
             <div className="flex-1 flex flex-col justify-center px-8">
               <nav className="flex flex-col gap-6">
                 {navLinks.map((link, i) => (
@@ -131,7 +131,7 @@ export default function Navbar() {
               </nav>
             </div>
 
-            {/* Minimal Mobile Footer */}
+           
             <div className="p-10 border-t border-black/5 flex justify-between items-center">
               <div className="flex gap-6 text-[10px] font-black uppercase tracking-widest italic">
                 <a href="#" className="hover:text-red-600 transition-colors">Instagram</a>

@@ -13,7 +13,7 @@ export default function ScrollLink({
   offset?: number;
   children: ReactNode;
   className?: string;
-  onClick?: () => void;   // ✅ allow onClick
+  onClick?: () => void;   
 }) {
   return (
     <button
@@ -27,7 +27,7 @@ export default function ScrollLink({
           lenis.scrollTo(el, { offset });
         }
 
-        // ✅ call optional onClick (used for closing mobile menu)
+        
         if (onClick) onClick();
       }}
     >

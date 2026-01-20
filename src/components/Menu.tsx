@@ -48,7 +48,7 @@ export default function Menu() {
     <section id="menu" className="w-full bg-[#FDFCF7] overflow-x-hidden py-20">
       <Container>
 
-        {/* HEADER */}
+        
         <div className="mb-10 md:mb-12 lg:mb-16">
           <motion.h2
             initial={{ opacity: 0, x: -40 }}
@@ -67,7 +67,7 @@ export default function Menu() {
           </div>
         </div>
 
-        {/* MOBILE + TABLET CAROUSEL */}
+        
         <div className="lg:hidden relative flex items-center justify-center py-6 md:py-4 md:-mt-10">
           <AnimatePresence mode="wait">
             <motion.div
@@ -90,7 +90,7 @@ export default function Menu() {
                 cursor-grab active:cursor-grabbing
               "
             >
-              {/* STICKER */}
+              
               <div
                 className={`absolute -top-10 -right-1 w-24 h-24 ${menuCategories[index].color}
                 border-[4px] border-black flex items-center justify-center text-5xl
@@ -117,7 +117,7 @@ export default function Menu() {
           </AnimatePresence>
         </div>
 
-        {/* DESKTOP GRID */}
+        
         <div className="hidden lg:grid grid-cols-3 gap-8 xl:gap-12">
           {menuCategories.map((category, i) => (
             <motion.div
