@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+SAVORÉ is a premium, editorial-style restaurant website built with Next.js, Tailwind CSS, Framer Motion, and Lenis.
+The experience is calm, intentional, and typography-driven — inspired by award-ready hospitality websites.
 
-## Getting Started
+✨ Project Vision
 
-First, run the development server:
+SAVORÉ focuses on restraint and confidence rather than visual noise.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Editorial typography
+Minimal color usage
+Structured layouts
+Smooth, continuous motion
+Timeless, high-end aesthetic
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The goal is to create a restaurant website that feels crafted, considered, and never loud.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🛠 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Next.js (App Router)
+React + TypeScript
+Tailwind CSS
+Framer Motion
+Lenis (Smooth Scrolling)
 
-## Learn More
+🎨 Design System (LOCKED)
+Color
 
-To learn more about Next.js, take a look at the following resources:
+Black & off-white base
+Red used only as an accent
+No gradients
+No flashy colors
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Typography
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Bold grotesk for headings
+Serif italic used only for emphasis
+Uppercase with tight tracking
+Typography-led layouts
 
-## Deploy on Vercel
+Layout Rules
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+No mx-auto on large screens
+Horizontal spacing handled by a reusable Container
+Desktop and mobile share the same design language
+No mobile-only redesigns
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🧭 Scrolling & Navigation Architecture
+Lenis Smooth Scroll
+
+Single global Lenis instance
+Mounted only once in app/layout.tsx
+Exposed globally via:
+
+(window as any).lenis
+
+Never mounted inside pages or components
+
+Scroll Navigation Rules (VERY IMPORTANT)
+
+No hash navigation
+No browser anchor scrolling
+No <a href="#section">
+All scrolling handled via Lenis
+
+ScrollLink Component
+
+All internal navigation uses a custom ScrollLink component.
+
+Renders a <button>
+Calls lenis.scrollTo()
+Supports offset for sticky navbar
+Supports optional onClick (used for mobile menu close)
+Children must be non-interactive elements (span, div, text)
+
+📄 Site Structure
+
+Each section exists in normal document flow and has a stable ID.
+
+section id="menu"
+section id="about"
+section id="gallery"
+section id="reserve"
+
+🧩 Implemented Sections
+Hero
+
+Editorial headline
+Lenis-powered CTAs
+Minimal motion
+
+Menu
+
+Desktop grid
+Mobile carousel
+Shared header style (design reference)
+
+Gallery — The Look
+
+Vertical scroll controlling horizontal motion
+Sticky section (300vh)
+Full-bleed film strip
+Editorial philosophy section
+
+About
+
+Two-column editorial layout
+Parallax imagery
+Continuous subtle motion
+
+Booking / Reserve
+
+Two-column layout
+Editorial booking form
+Lenis scroll target (id="reserve")
+
+Footer
+
+Editorial grid layout
+Live local time
+Lenis-powered navigation
+CTA scrolls to reservation section
+
+🚫 Strict Rules (Do Not Break)
+
+No hash navigation
+No browser anchor scrolling
+No mx-auto on large screens
+No moving Lenis into pages
+No redesigning section headers
+No helper UI components unless required
+No mobile-only layouts
+
+🎯 Project Goal
+
+To build a restaurant website that feels:
+
+Intentional
+Confident
+Calm
+Minimal
+Timeless
+Award-ready
+
+👤 Author
+
+Udesh Bhatti
+Design & Development
+
+📜 License
+
+This project is for educational and portfolio purposes only.
